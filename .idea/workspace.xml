@@ -1,11 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2f20454-ba41-4599-a3e7-43308d9a692c" name="Default Changelist" comment="" />
+    <list default="true" id="f2f20454-ba41-4599-a3e7-43308d9a692c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/services/LogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/src/main/proto/LogContent.proto" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-api/src/main/proto/LoggerContent.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/Empty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/EmptyOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LogContent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LogContentOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LogContentOuterClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LoggerServiceGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/any.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/api.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/compiler/plugin.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/descriptor.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/duration.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/empty.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/field_mask.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/source_context.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/struct.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/timestamp.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/type.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/416d6985565888c8aa4f5988005054d1/google/protobuf/wrappers.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/annotations.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/auth.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/backend.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/billing.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/config_change.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/consumer.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/context.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/control.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/distribution.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/documentation.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/endpoint.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/experimental/authorization_config.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/experimental/experimental.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/http.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/httpbody.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/label.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/log.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/logging.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/metric.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/monitored_resource.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/monitoring.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/quota.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/service.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/source_info.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/system_parameter.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/api/usage.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/cloud/audit/audit_log.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/logging/type/http_request.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/logging/type/log_severity.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/longrunning/operations.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/rpc/code.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/rpc/error_details.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/rpc/status.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/color.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/date.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/dayofweek.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/latlng.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/money.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/postal_address.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-dependencies/f55bf377b1804b40db2bb97e6f091b81/google/type/timeofday.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-plugins/protoc-3.7.1-osx-x86_64.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-api/target/protoc-plugins/protoc-gen-grpc-java-1.22.1-osx-x86_64.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/log/NoticeAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/log/NoticeAppenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppenderConfig.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/syslog-client/target/" />
     <ignored path="$PROJECT_DIR$/syslog-api/target/" />
+    <ignored path="$PROJECT_DIR$/syslog-provider/target/" />
+    <ignored path="$PROJECT_DIR$/syslog-collect/target/" />
+    <ignored path="$PROJECT_DIR$/syslog-storage/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +129,109 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppenderConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1012#1013#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-storage/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-api/src/main/proto/LoggerContent.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/config/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/services/LogService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,14 +247,29 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/syslog-api/src/main/proto/ShudiLog.proto" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/syslog-client/pom.xml" />
-        <option value="$PROJECT_DIR$/syslog-api/pom.xml" />
         <option value="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/log/NoticeAppenderConfig.java" />
-        <option value="$PROJECT_DIR$/syslog-api/src/main/proto/LogContent.proto" />
         <option value="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/log/NoticeAppender.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c676d025-83af-4063-b205-e4aea71fc61e/console.sql" />
+        <option value="$PROJECT_DIR$/syslog-api/pom.xml" />
+        <option value="$PROJECT_DIR$/syslog-client/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/Application.java" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/LogService.java" />
+        <option value="$PROJECT_DIR$/syslog-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/controllers/LogController.java" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/services/LogConsumer.java" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/services/LogService.java" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/config/Config.java" />
+        <option value="$PROJECT_DIR$/syslog-provider/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/syslog-collect/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/syslog-collect/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/syslog-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/syslog-api/src/main/proto/LogContent.proto" />
+        <option value="$PROJECT_DIR$/syslog-api/src/main/proto/LoggerContent.proto" />
+        <option value="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppenderConfig.java" />
+        <option value="$PROJECT_DIR$/syslog-storage/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java" />
       </list>
     </option>
   </component>
@@ -101,11 +295,6 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="syslog-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="syslog-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
         <path>
@@ -117,14 +306,22 @@
           <item name="syslog-center" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="syslog-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="syslog-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,13 +329,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
               <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="proto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
@@ -151,11 +374,161 @@
               <item name="syslog-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="collect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="collect" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="collect" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="syslog-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="syslog-center" type="462c0819:PsiDirectoryNode" />
+              <item name="syslog-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,7 +536,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/syslog-client/src/test/java/resources" />
@@ -172,6 +545,9 @@
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/syslog-client/src/test/java/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log" />
       <recent name="$PROJECT_DIR$/syslog-api/src/main/proto" />
@@ -189,7 +565,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="replType" value="NREPL" />
       <setting name="execution" value="LEININGEN" />
@@ -227,6 +603,20 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="syslog-collect" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shudieds.log.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SyslogStorageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="syslog-storage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shudieds.storage.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -239,22 +629,24 @@
       <option name="presentableId" value="Default" />
       <updated>1563876058596</updated>
       <workItem from="1563876062953" duration="6143000" />
-      <workItem from="1563888178358" duration="6232000" />
+      <workItem from="1563888178358" duration="8674000" />
+      <workItem from="1563954831313" duration="1263000" />
+      <workItem from="1563957779375" duration="4528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12375000" />
+    <option name="totallyTimeSpent" value="20608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25608012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
@@ -271,6 +663,8 @@
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="15" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32891566" />
+      <window_info anchor="right" id="Jms Messenger" weight="0.3297568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -339,20 +733,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25-sources.jar!/org/apache/log4j/ConsoleAppender.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1-sources.jar!/com/google/protobuf/MessageOrBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -398,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LogContent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -416,13 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/grpc-java/com/shudieds/log/AppendServiceGrpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4713">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/grpc-java/com/shudieds/log/AppendServiceGrpc.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/spi/ILoggingEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-818">
@@ -430,15 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c676d025-83af-4063-b205-e4aea71fc61e/schema/sync_db/table/test_table">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="f9a590b6-2392-4333-a2c3-7680bb383404">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://c676d025-83af-4063-b205-e4aea71fc61e/schema/sync_db/table/test_table" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c676d025-83af-4063-b205-e4aea71fc61e/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -449,37 +808,6 @@
     <entry file="file://$PROJECT_DIR$/syslog-center.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/log/NoticeAppender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/log/NoticeAppenderConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
-          <caret line="9" column="113" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/Empty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -487,13 +815,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LoggerServiceGrpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/LoggerServiceGrpc.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/ch/qos/logback/core/UnsynchronizedAppenderBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -507,10 +829,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-api/src/main/proto/LogContent.proto">
+    <entry file="file://$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/grpc-java/com/shudieds/log/LoggerServiceGrpc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="13" selection-end-column="1" />
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-provider/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/syslog-client/src/test/java/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/controllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE-sources.jar!/org/springframework/stereotype/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-provider/src/main/java/com/shudieds/log/controllers/LogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.22.1/grpc-api-1.22.1-sources.jar!/io/grpc/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="151" column="39" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/services/LogConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="113" column="42" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-collect/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-storage/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-api/src/main/proto/LoggerContent.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppenderConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/services/LogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
