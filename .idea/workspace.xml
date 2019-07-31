@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2f20454-ba41-4599-a3e7-43308d9a692c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="25" column="54" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="54" />
+            <state relative-caret-position="250">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="264">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+            <state relative-caret-position="236">
+              <caret line="32" column="65" lean-forward="true" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -127,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="231">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,10 +142,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/QueryParams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="216">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
               <folding>
-                <element signature="e#237#238#0" expanded="true" />
                 <element signature="e#267#268#0" expanded="true" />
                 <element signature="e#313#314#0" expanded="true" />
                 <element signature="e#351#352#0" expanded="true" />
@@ -162,10 +164,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,8 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+            <state relative-caret-position="192">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -231,7 +235,6 @@
         <option value="$PROJECT_DIR$/syslog-collect/src/test/java/com/shudieds/log/AppTest.java" />
         <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/config/Config.java" />
         <option value="$PROJECT_DIR$/syslog-collect/src/test/java/com/shudieds/log/SyslogProviderApplicationTests.java" />
-        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java" />
         <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContent.java" />
         <option value="$PROJECT_DIR$/syslog-storage/pom.xml" />
         <option value="$PROJECT_DIR$/syslog-api/target/generated-sources/protobuf/java/com/shudieds/log/api/LoggerContent.java" />
@@ -242,10 +245,11 @@
         <option value="$PROJECT_DIR$/syslog-client/src/main/java/com/shudieds/client/NoticeAppender.java" />
         <option value="$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/config/Config.java" />
         <option value="$PROJECT_DIR$/syslog-collect/src/main/java/com/shudieds/collect/controller/LogController.java" />
-        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java" />
         <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/QueryParams.java" />
-        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java" />
         <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogService.java" />
+        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java" />
+        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java" />
+        <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java" />
         <option value="$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java" />
       </list>
     </option>
@@ -626,7 +630,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564564857797" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564566708636" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -780,7 +784,7 @@
       <workItem from="1564193079912" duration="4816000" />
       <workItem from="1564363611806" duration="11229000" />
       <workItem from="1564450629124" duration="19776000" />
-      <workItem from="1564537373454" duration="8231000" />
+      <workItem from="1564537373454" duration="9455000" />
     </task>
     <servers />
   </component>
@@ -817,7 +821,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77557000" />
+    <option name="totallyTimeSpent" value="78781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -832,7 +836,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18454936" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18454936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -843,14 +847,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.2800983" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32923833" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37714988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923833" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run with VisualVM" order="9" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.36732188" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.36732188" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.2972973" />
@@ -940,7 +944,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java</url>
-          <line>28</line>
+          <line>29</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
@@ -970,27 +974,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java</url>
-          <line>19</line>
+          <line>22</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java</url>
-          <line>38</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java</url>
-          <line>29</line>
+          <line>26</line>
           <properties />
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1345,16 +1343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-elasticsearch/3.1.9.RELEASE/spring-data-elasticsearch-3.1.9.RELEASE-sources.jar!/org/springframework/data/elasticsearch/annotations/DateFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1369,10 +1357,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContent.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.4.3/elasticsearch-6.4.3.jar!/org/elasticsearch/client/transport/TransportClientNodesService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="278" selection-start-line="278" selection-end-line="278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1381,10 +1376,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/QueryParams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="216">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
-            <element signature="e#237#238#0" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />
             <element signature="e#313#314#0" expanded="true" />
             <element signature="e#351#352#0" expanded="true" />
@@ -1400,24 +1394,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/Application.java">
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        <state relative-caret-position="192">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.4.3/elasticsearch-6.4.3.jar!/org/elasticsearch/client/transport/TransportClientNodesService.class">
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/es/LoggerContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="278" selection-start-line="278" selection-end-line="278" />
+        <state relative-caret-position="180">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="264">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1426,8 +1428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/controller/LogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="231">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1436,21 +1438,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        <state relative-caret-position="236">
+          <caret line="32" column="65" lean-forward="true" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/services/LogConsumer.java">
+    <entry file="file://$PROJECT_DIR$/syslog-storage/src/main/java/com/shudieds/log/storage/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
