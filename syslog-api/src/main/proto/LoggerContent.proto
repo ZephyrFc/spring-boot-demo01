@@ -10,6 +10,7 @@ message LoggerContent {
     string traceId = 3;
     map<string, string> meta = 4;
     string content = 5;
+    string dc = 6;
 }
 
 message Empty {}
