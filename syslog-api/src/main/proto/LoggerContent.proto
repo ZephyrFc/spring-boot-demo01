@@ -11,6 +11,10 @@ message LoggerContent {
     map<string, string> meta = 4;
     string content = 5;
     string dc = 6;
+    string scene = 7;
+    string loggerName = 8;
+    string threadName = 9;
+    string level = 10;
 }
 
 message Empty {}
