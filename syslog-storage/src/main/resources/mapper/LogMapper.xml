@@ -21,10 +21,11 @@
             #{item.successCount},#{item.failCount},
             #{item.dcId}, #{item.dataType},
             #{item.taskId}, #{item.linkEnv}
-            )on duplicate key update
-            SyncTime=#{item.syncTime},
-            SuccessCount = SuccessCount + #{item.successCount},
-            FailCount = FailCount+#{item.failCount}
+            )
         </foreach>
+        on duplicate key update
+        SyncTime=VALUES(syncTime) ,
+        SuccessCount = SuccessCount+VALUES (successCount),
+        FailCount = FailCount+VALUES (failCount)
     </insert>
 </mapper>
