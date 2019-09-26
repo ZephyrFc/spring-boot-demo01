@@ -12,6 +12,7 @@
         <module>syslog-collect</module>
         <module>syslog-client</module>
         <module>syslog-api</module>
+        <module>syslog-storage</module>
     </modules>
 
     <parent>
