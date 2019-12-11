@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/log")
@@ -56,17 +57,23 @@ public class LogController {
      * @param dc
      */
     @RequestMapping(value = "{sysName}/{dc}/logBack.xml", method = RequestMethod.GET, produces = "application/xml;charset=UTF-8")
-    public void logBack(HttpServletResponse response, @PathVariable String sysName, @PathVariable String dc){
+    public void logBack(HttpServletResponse response, @PathVariable String sysName, @PathVariable String dc) {
         logService.logBack(response, dc, sysName);
     }
 
     /**
      * 查询单据日志接口
+     *
      * @param billLogParams
      * @return
      */
     @RequestMapping(value = "/billLogSearch", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public List<BillLog> billLogSearch(@RequestBody BillLogParams billLogParams) {
         return logService.billLogSearch(billLogParams);
+    }
+
+    @RequestMapping(value = "/ifactorySearch", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    public List<Map<String, Object>> ifactorySearch(@RequestBody Map<String, Object> params) throws Exception{
+        return logService.ifactorySearch(params);
     }
 }

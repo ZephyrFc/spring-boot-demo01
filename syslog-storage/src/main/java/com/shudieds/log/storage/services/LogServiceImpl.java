@@ -52,6 +52,7 @@ import java.time.LocalTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.shudieds.log.storage.constants.Constants.*;
 
@@ -167,6 +168,47 @@ public class LogServiceImpl implements LogService {
             logger.error("billLogSearch search error:{}", ex.getMessage(), ex);
         }
         return billLogs;
+    }
+
+    @Override
+    public List<Map<String, Object>> ifactorySearch(Map<String, Object> params) throws Exception {
+        Objects.requireNonNull(params);
+        Objects.requireNonNull(params.get(LOGTYPE));
+        List<Map<String, Object>> result = new ArrayList<>();
+        Map<String, Object> builderParams = params.entrySet().stream().filter(x -> !LOGTYPE.equals(x.getKey())
+                && !PAGE.equals(x.getKey())
+                && !PAGE_SIZE.equals(x.getKey())
+                && !SORT.equals(x.getKey())).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        BoolQueryBuilder boolQueryBuilder = generateIfactoryBuilder(builderParams);
+        SearchRequestBuilder searchRequestBuilder = client.prepareSearch(String.valueOf(params.get(LOGTYPE))).setQuery(boolQueryBuilder);
+        searchRequestBuilder.setFrom(null == params.get(PAGE) ? PAGE_VALUE : (int) params.get(PAGE) - 1)
+                .setSize((null == params.get(PAGE) ? PAGE_SIZE_VALUE : (int) params.get(PAGE_SIZE)));
+        setSort(searchRequestBuilder, (Map) params.get(SORT));
+        SearchResponse searchResponse = searchRequestBuilder.execute().actionGet();
+        SearchHits hits = searchResponse.getHits();
+        setHits(hits, result);
+        return result;
+    }
+
+    private BoolQueryBuilder generateIfactoryBuilder(Map<String, Object> params) {
+        List<QueryBuilder> queryBuilders = new ArrayList<>();
+        if (!CollectionUtils.isEmpty(params)) {
+            params.forEach((k, v) -> {
+                QueryBuilder queryBuilder = null;
+                if (v instanceof String) {
+                    queryBuilder = QueryBuilders.wildcardQuery(k + Constants.KEYWORD,
+                            Constants.WILDCARD + v + Constants.WILDCARD);
+                }
+                if (v instanceof Number) {
+                    queryBuilder = QueryBuilders.termQuery(k, v);
+                }
+                if (v instanceof List) {
+                    queryBuilder = QueryBuilders.termsQuery(k + Constants.KEYWORD, v);
+                }
+                Optional.ofNullable(queryBuilder).ifPresent(queryBuilders::add);
+            });
+        }
+        return getBoolQueryBuilder(queryBuilders);
     }
 
     private boolean clearScroll(Client client, String scrollId) {
@@ -397,5 +439,4 @@ public class LogServiceImpl implements LogService {
         }
         return null;
     }
-
 }

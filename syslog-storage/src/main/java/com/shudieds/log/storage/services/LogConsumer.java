@@ -9,6 +9,10 @@ import com.shudieds.log.storage.es.BillLogRepository;
 import com.shudieds.log.storage.es.LoggerContentRepository;
 import com.shudieds.log.storage.es.RunTimeLogRepository;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.elasticsearch.action.bulk.BulkRequestBuilder;
+import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.client.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -18,6 +22,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
@@ -33,7 +38,8 @@ public class LogConsumer {
     private RunTimeLogRepository runTimeLogRepository;
     @Autowired
     private BillLogRepository billLogRepository;
-
+    @Resource
+    private Client client;
     private static final ObjectMapper objectMapper = new ObjectMapper();
     @Value("#{'${topics}'.split(',')[0]}")
     private String sys_log_topic;
@@ -42,11 +48,12 @@ public class LogConsumer {
 
 
     @KafkaListener(topics = "#{'${topics}'.split(',')}")
-    public void consumer(List<ConsumerRecord<?, ?>> records) {
+    public void consumer(List<ConsumerRecord<?, ?>> records) throws Exception {
         logger.info("consumer data:{}", records);
         List<LoggerContent> loggerContents = new ArrayList<>();
         List<RunTimeLog> runTimeLogs = new ArrayList<>();
         List<BillLog> billLogs = new ArrayList<>();
+        List<Map<String, Object>> ifactory = new ArrayList<>();
         if (Optional.ofNullable(records).isPresent()) {
             records.forEach(record -> {
                 try {
@@ -59,7 +66,7 @@ public class LogConsumer {
                         long timestamp = LocalDateTime.now().toInstant(ZoneOffset.of(Constants.PLUS_EIGHT)).toEpochMilli();
                         loggerContent.setTimestamp(String.valueOf(timestamp));
                         loggerContents.add(loggerContent);
-                    } else {
+                    } else if (dc_log_upload_topic.equals(record.topic())) {
                         Map<String, Object> data = objectMapper.readValue(record.value().toString(),
                                 new TypeReference<Map<String, Object>>() {
                                 });
@@ -71,6 +78,11 @@ public class LogConsumer {
                             dcLogUploadHandler(data, Constants.BILL_LOG, BillLog.class,
                                     billLogs, (v1, v2) -> v2.add(v1));
                         }
+                    } else {
+                        Map<String, Object> data = objectMapper.readValue(record.value().toString(),
+                                new TypeReference<Map<String, Object>>() {
+                                });
+                        ifactory.add(data);
                     }
                 } catch (Exception e) {
                     logger.error("consumer read kafka data error:{}", e.getMessage(), e);
@@ -84,6 +96,9 @@ public class LogConsumer {
             }
             if (!CollectionUtils.isEmpty(billLogs)) {
                 billLogRepository.saveAll(billLogs);
+            }
+            if (!CollectionUtils.isEmpty(ifactory)) {
+                ifactoryHandler(ifactory);
             }
         }
     }
@@ -132,8 +147,19 @@ public class LogConsumer {
         return 0;
     }
 
-    public static void main(String[] args) {
-        long timestamp = LocalDateTime.now().toInstant(ZoneOffset.of(Constants.PLUS_EIGHT)).toEpochMilli();
-        System.out.println(timestamp);
+    public void ifactoryHandler(List<Map<String, Object>> data) throws Exception {
+        if (!CollectionUtils.isEmpty(data)) {
+            BulkRequestBuilder bulkRequest = client.prepareBulk();
+            data.forEach(map -> {
+                map.put(Constants.TIMESTAMP, LocalDateTime.now().toInstant(ZoneOffset.of(Constants.PLUS_EIGHT)).toEpochMilli());
+                IndexRequest request = client.prepareIndex(String.valueOf(map.get(Constants.LOGTYPE)),
+                        map.get(Constants.LOGTYPE) + "_type",
+                        String.valueOf(null == map.get(Constants.ID) ? UUID.randomUUID().toString()
+                                : map.get(Constants.ID))).setSource(map).request();
+                bulkRequest.add(request);
+            });
+            bulkRequest.execute().actionGet();
+        }
     }
+
 }

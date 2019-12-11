@@ -86,4 +86,11 @@ public class Constants {
             SYNCTIME_END, EXECUTIONTIME_START, EXECUTIONTIME_END, TASKBEGINTIME_START, TASKBEGINTIME_END, CLASS, PAGESIZE, PAGENUM);
     public static final List<String> WILDCARD_LIST = Lists.newArrayList(ERRMSG, CONTENT, RETURNMSG);
     public static final List<String> PARAM_LIST = Lists.newArrayList(SCENECODE);
+    public static final String ID = "id";
+    public static final String SORT = "sort";
+    public static final String PAGE = "page";
+    public static final String PAGE_SIZE = "pageSize";
+    public static final String LOGTYPE = "logType";
+    public static final int PAGE_VALUE = 0;
+    public static final int PAGE_SIZE_VALUE = 20;
 }

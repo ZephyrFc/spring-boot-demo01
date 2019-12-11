@@ -4,6 +4,7 @@ import com.shudieds.log.storage.bean.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.Map;
 
 
 public interface LogService {
@@ -17,4 +18,6 @@ public interface LogService {
     void logBack(HttpServletResponse response, String dc, String sysName);
 
     List<BillLog> billLogSearch(BillLogParams billLogParams);
+
+    List<Map<String, Object>> ifactorySearch(Map<String, Object> params) throws Exception;
 }
