@@ -12,6 +12,13 @@
         </encoder>
     </appender>
     <appender name="kafka-appender" class="com.shudieds.kafkaclient.KafkaAppender">
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>formattedMessage.contains("logType")</expression>
+            </evaluator>
+            <OnMatch>ACCEPT </OnMatch>
+            <OnMismatch>DENY</OnMismatch>
+        </filter>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>

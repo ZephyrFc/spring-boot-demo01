@@ -111,9 +111,7 @@ public class KafkaAppender<E> extends KafkaAppenderConfig<E> {
 
     @Override
     protected void append(E e) {
-        if (null == e || !((LoggingEvent) e).getFormattedMessage().contains("logType")) {
-            return;
-        }
+        if (null == e) return;
         LoggingEvent loggingEvent = (LoggingEvent) e;
         final ProducerRecord<String, String> record = new ProducerRecord<>("ifactory-log", UUID.randomUUID().toString(), loggingEvent.getFormattedMessage());
         final Producer<String, String> producer = lazyProducer.get();
