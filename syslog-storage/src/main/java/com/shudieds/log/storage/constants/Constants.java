@@ -56,8 +56,11 @@ public class Constants {
     public static final String DCID = "dcId";
     public static final String WILDCARD = "*";
     public static final String MYLOG = "mylog.xml";
+    public static final String KAFKALOG = "kafka.xml";
     public static final String NAME = "name";
     public static final String APPENDER = "appender";
+    public static final String LEVEL = "level";
+    public static final String ROOT = "root";
     public static final String HOST = "host";
     public static final String PORT = "port";
     public static final String DC_XML = "dc";
@@ -93,4 +96,6 @@ public class Constants {
     public static final String LOGTYPE = "logType";
     public static final int PAGE_VALUE = 0;
     public static final int PAGE_SIZE_VALUE = 20;
+    public static final String TOPIC = "topic";
+    public static final String PRODUCER_CONFIG = "producerConfig";
 }

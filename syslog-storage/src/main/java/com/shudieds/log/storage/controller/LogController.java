@@ -61,6 +61,11 @@ public class LogController {
         logService.logBack(response, dc, sysName);
     }
 
+    @RequestMapping(value = "{level}/logBack.xml", method = RequestMethod.GET, produces = "application/xml;charset=UTF-8")
+    public void kafkaLogBack(HttpServletResponse response, @PathVariable String level) {
+        logService.logBack(response, level);
+    }
+
     /**
      * 查询单据日志接口
      *
@@ -73,7 +78,7 @@ public class LogController {
     }
 
     @RequestMapping(value = "/ifactorySearch", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
-    public List<Map<String, Object>> ifactorySearch(@RequestBody Map<String, Object> params) throws Exception{
+    public List<Map<String, Object>> ifactorySearch(@RequestBody Map<String, Object> params) throws Exception {
         return logService.ifactorySearch(params);
     }
 }

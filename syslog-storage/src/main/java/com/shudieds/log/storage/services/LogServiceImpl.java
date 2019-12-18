@@ -73,8 +73,10 @@ public class LogServiceImpl implements LogService {
     private String host;
     @Value("${grpc.listen.port}")
     private String port;
-    @Value("${log.level}")
-    private String level;
+    @Value("#{'${topics}'.split(',')[2]}")
+    private String topic;
+    @Value("${producerConfig}")
+    private String producerConfig;
 
     @Override
     public ResponseData<LoggerContent> loggerContentSearchPage(LoggerContentParams loggerContentParams) {
@@ -132,7 +134,20 @@ public class LogServiceImpl implements LogService {
         data.put(Constants.PORT, port);
         data.put(Constants.DC_XML, dc);
         data.put(Constants.SYSNAME, sysName);
-        try (InputStream inputStream = Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(Constants.MYLOG));
+        generateXml(response, Constants.MYLOG, data);
+    }
+
+    @Override
+    public void logBack(HttpServletResponse response, String level) {
+        Map<String, String> data = new HashMap<>();
+        data.put(Constants.TOPIC, topic);
+        data.put(Constants.PRODUCER_CONFIG, producerConfig);
+        data.put(LEVEL, level);
+        generateXml(response, Constants.KAFKALOG, data);
+    }
+
+    private void generateXml(HttpServletResponse response, String file, Map<String, String> data) {
+        try (InputStream inputStream = Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(file));
              OutputStream outputStream = response.getOutputStream()) {
             byte[] bytes = writeXml(inputStream, data);
             response.setContentType(Constants.CONTENT_TYPE);
@@ -410,14 +425,16 @@ public class LogServiceImpl implements LogService {
             Document document = saxReader.read(inputStream);
             Element rootElt = document.getRootElement();
             Iterator iter = rootElt.elementIterator(Constants.APPENDER);
+            Element iterRoot = rootElt.element(Constants.ROOT);
+            Optional.ofNullable(iterRoot).ifPresent(ir -> Optional.ofNullable(ir.attribute(LEVEL)).ifPresent(i -> i.setValue(data.get(LEVEL))));
             // 遍历head节点
             while (iter.hasNext()) {
                 Element recordEle = (Element) iter.next();
                 String value = recordEle.attributeValue(Constants.NAME);
                 if (Constants.KAFKA_APPENDER.equals(value)) {
                     Optional.ofNullable(data).ifPresent(d ->
-                            d.forEach((k, v) -> {
-                                recordEle.addElement(k).addText(v);
+                            d.entrySet().stream().filter(d1 -> !LEVEL.equals(d1.getKey())).forEach(k -> {
+                                recordEle.addElement(k.getKey()).addText(k.getValue());
                             }));
                 }
             }

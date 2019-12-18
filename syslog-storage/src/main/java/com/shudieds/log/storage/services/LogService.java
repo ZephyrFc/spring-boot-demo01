@@ -17,6 +17,8 @@ public interface LogService {
 
     void logBack(HttpServletResponse response, String dc, String sysName);
 
+    void logBack(HttpServletResponse response,String level);
+
     List<BillLog> billLogSearch(BillLogParams billLogParams);
 
     List<Map<String, Object>> ifactorySearch(Map<String, Object> params) throws Exception;

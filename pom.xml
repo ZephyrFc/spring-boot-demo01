@@ -13,6 +13,7 @@
         <module>syslog-client</module>
         <module>syslog-api</module>
         <module>syslog-storage</module>
+        <module>syslog-kafka-client</module>
     </modules>
 
     <parent>
