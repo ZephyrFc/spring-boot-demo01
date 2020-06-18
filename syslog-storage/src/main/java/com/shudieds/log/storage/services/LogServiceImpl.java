@@ -163,12 +163,13 @@ public class LogServiceImpl implements LogService {
     public List<BillLog> billLogSearch(BillLogParams billLogParams) {
         logger.info("billLogSearch params:{}", billLogParams);
         List<BillLog> billLogs = new ArrayList<>();
+        SearchResponse searchResponse = null;
         try {
             BoolQueryBuilder boolQueryBuilder = generateBillLogBuilder(billLogParams);
             SearchRequestBuilder searchRequestBuilder = client.prepareSearch(Constants.BILL_LOG_INDEX).setQuery(boolQueryBuilder);
             setSort(searchRequestBuilder, billLogParams.getSort());
             searchRequestBuilder.setScroll("2m").setSize(1000);
-            SearchResponse searchResponse = searchRequestBuilder.execute().actionGet();
+            searchResponse = searchRequestBuilder.execute().actionGet();
             SearchHits hits = searchResponse.getHits();
             setHits(hits, billLogs);
             do {
@@ -178,9 +179,13 @@ public class LogServiceImpl implements LogService {
                 SearchHits shits = searchResponse.getHits();
                 setHits(shits, billLogs);
             } while (searchResponse.getHits().getHits().length > 0);
-            clearScroll(client, searchResponse.getScrollId());
+
         } catch (Exception ex) {
             logger.error("billLogSearch search error:{}", ex.getMessage(), ex);
+        }finally {
+            if (null != searchResponse){
+                clearScroll(client, searchResponse.getScrollId());
+            }
         }
         return billLogs;
     }
