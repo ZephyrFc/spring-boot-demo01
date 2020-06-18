@@ -27,7 +27,6 @@ import org.elasticsearch.search.sort.SortOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -58,17 +57,16 @@ import static com.shudieds.log.storage.constants.Constants.*;
 
 @Service
 public class LogServiceImpl implements LogService {
-    private Logger logger = LoggerFactory.getLogger(LogServiceImpl.class);
-    @Autowired
+    private final Logger logger = LoggerFactory.getLogger(LogServiceImpl.class);
+    @Resource
     private LoggerContentRepository loggerContentRepository;
-    @Autowired
+    @Resource
     private RunTimeLogRepository runTimeLogRepository;
-    @Autowired
+    @Resource
     private BillLogRepository billLogRepository;
     private static final ObjectMapper objectMapper = new ObjectMapper();
     @Resource
     private Client client;
-    private List<Map<String, Object>> subAggList = new ArrayList<Map<String, Object>>();
     @Value("${grpc.listen.host}")
     private String host;
     @Value("${grpc.listen.port}")

@@ -9,11 +9,9 @@ import com.shudieds.log.storage.es.BillLogRepository;
 import com.shudieds.log.storage.es.LoggerContentRepository;
 import com.shudieds.log.storage.es.RunTimeLogRepository;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.elasticsearch.client.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -29,15 +27,15 @@ import java.util.stream.Collectors;
 @Component
 public class LogConsumer {
     private final Logger logger = LoggerFactory.getLogger(LogConsumer.class);
-    @Autowired
-    private LoggerContentRepository loggerContentRepository;
-    @Autowired
-    private RunTimeLogRepository runTimeLogRepository;
-    @Autowired
-    private BillLogRepository billLogRepository;
     @Resource
-    private Client client;
+    private LoggerContentRepository loggerContentRepository;
+    @Resource
+    private RunTimeLogRepository runTimeLogRepository;
+    @Resource
+    private BillLogRepository billLogRepository;
+
     private static final ObjectMapper objectMapper = new ObjectMapper();
+
     @Value("#{'${topics}'.split(',')[0]}")
     private String sys_log_topic;
     @Value("#{'${topics}'.split(',')[1]}")
