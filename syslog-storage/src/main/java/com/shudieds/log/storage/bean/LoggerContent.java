@@ -5,7 +5,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serializable;
 
-@Document(indexName = "logger_content_index")
+@Document(indexName = "logger_content_index",shards = 3,replicas = 1)
 public class LoggerContent implements Serializable {
     @Id
     //唯一id

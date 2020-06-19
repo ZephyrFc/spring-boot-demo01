@@ -3,7 +3,7 @@ package com.shudieds.log.storage.bean;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "run_time_log_index")
+@Document(indexName = "run_time_log_index",shards = 3,replicas = 1)
 public class RunTimeLog {
     @Id
     //唯一ID

@@ -48,7 +48,6 @@ import java.lang.reflect.Method;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -247,18 +246,6 @@ public class LogServiceImpl implements LogService {
         }
     }
 
-    private int date2TimeStamp(String date_str, String format, boolean flag) {
-        try {
-            LocalDateTime begin = LocalDateTime.of(LocalDate.parse(date_str,
-                    DateTimeFormatter.ofPattern(format)), flag ? LocalTime.MIN : LocalTime.MAX);
-            Long second = begin.toEpochSecond(ZoneOffset.of(Constants.PLUS_EIGHT));
-            return second.intValue();
-        } catch (Exception e) {
-            logger.error("date2TimeStamp date convert error:{}", e.getMessage(), e);
-        }
-        return 0;
-    }
-
     private String getMinOrMaxDate(String date_str, String format, boolean flag) {
         try {
             LocalDateTime begin = LocalDateTime.of(LocalDate.parse(date_str,
@@ -429,7 +416,7 @@ public class LogServiceImpl implements LogService {
             Element rootElt = document.getRootElement();
             Iterator iter = rootElt.elementIterator(Constants.APPENDER);
             Element iterRoot = rootElt.element(Constants.ROOT);
-            Optional.ofNullable(iterRoot).ifPresent(ir -> Optional.ofNullable(ir.attribute(LEVEL)).ifPresent(i -> i.setValue(data.get(LEVEL))));
+            Optional.ofNullable(iterRoot).flatMap(ir -> Optional.ofNullable(ir.attribute(LEVEL))).ifPresent(i -> i.setValue(data.get(LEVEL)));
             // 遍历head节点
             while (iter.hasNext()) {
                 Element recordEle = (Element) iter.next();

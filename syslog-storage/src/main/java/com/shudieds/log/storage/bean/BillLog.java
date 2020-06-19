@@ -3,7 +3,7 @@ package com.shudieds.log.storage.bean;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "bill_log_index")
+@Document(indexName = "bill_log_index",shards = 3,replicas = 1)
 public class BillLog {
     @Id
     //唯一ID，用的uuid
